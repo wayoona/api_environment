@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170727094343) do
+ActiveRecord::Schema.define(version: 20170727135003) do
 
   create_table "environments", force: :cascade do |t|
     t.string   "juhe_id"
@@ -18,7 +18,9 @@ ActiveRecord::Schema.define(version: 20170727094343) do
     t.string   "pinyin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "pm"
     t.index ["juhe_id"], name: "index_environments_on_juhe_id"
+    t.index ["name"], name: "index_environments_on_name"
   end
 
 end

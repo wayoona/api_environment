@@ -4,9 +4,8 @@ class CreateEnvironments < ActiveRecord::Migration[5.0]
       t.string :juhe_id
       t.string :name
       t.string :pinyin
-
       t.timestamps
     end
-    add_index :environments, :juhe_id
+    add_index :environments, :name
   end
 end

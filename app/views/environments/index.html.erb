@@ -1,0 +1,17 @@
+<table class="table">
+<tr>
+  <th>cityname</th>
+  <th>pinyin</th>
+  <th>Pm2.5</th>
+
+</tr>
+<% @environments.each do |environment| %>
+  <tr>
+    <td><%= environment.name %></td>
+    <td><%= environment.pinyin %></td>
+    <td><%= environment.pm %></td>
+    <td><%= link_to "更新pm", update_pm_environment_path(environment), :method => :post %></td>
+    <td></td>
+  </tr>
+<% end %>
+</table>
